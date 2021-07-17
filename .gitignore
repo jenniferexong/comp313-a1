@@ -75,3 +75,7 @@ DerivedDataCache/*
 
 # Mac
 **/.DS_Store
+
+# Ignore some content
+Content/StarterContent/*
+Content/StylizedNatureVol2/*
