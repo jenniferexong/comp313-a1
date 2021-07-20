@@ -150,5 +150,5 @@ int AduckCharacter::GetCurrentScore()
 
 void AduckCharacter::UpdateScore(int score)
 {
-	CurrentScore += 1;
+	CurrentScore += score;
 }
