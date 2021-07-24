@@ -4,10 +4,10 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
-#include "duckCharacter.generated.h"
+#include "DuckCharacter.generated.h"
 
 UCLASS(config = Game)
-class AduckCharacter : public ACharacter
+class ADuckCharacter : public ACharacter
 {
     GENERATED_BODY()
 
@@ -20,7 +20,7 @@ class AduckCharacter : public ACharacter
     class UCameraComponent *FollowCamera;
 
 public:
-    AduckCharacter();
+    ADuckCharacter();
 
     /* Accessor for initial score */
     UFUNCTION(BlueprintPure, Category = "Score")
