@@ -30,6 +30,30 @@ public:
     UFUNCTION(BlueprintPure, Category = "Score")
     int GetCurrentScore();
 
+    /* Accessor for ducklings that died */
+    UFUNCTION(BlueprintPure, Category = "Score")
+    int GetDucklingsDead();
+
+    /* Accessor for ducklings that grew up*/
+    UFUNCTION(BlueprintPure, Category = "Score")
+    int GetDucklingsGrown();
+
+    /* Checks if the game is over */
+    UFUNCTION(BlueprintPure, Category = "Score")
+    bool IsGameOver();
+
+    /** 
+     * Increments number of ducklings died 
+     */
+    UFUNCTION(BlueprintCallable, Category = "Score")
+    void SetDucklingDied();
+
+    /** 
+     * Increments number of ducklings that have grown up 
+     */
+    UFUNCTION(BlueprintCallable, Category = "Score")
+    void SetDucklingGrown();
+
     /** 
      * Update player score 
      * @param score The amount to add to the current score
@@ -79,11 +103,17 @@ protected:
     // End of APawn interface
 
 private:
-    UPROPERTY(EditAnywhere, Category = "InitialScore")
+    UPROPERTY(EditAnywhere, Category = "Score")
     int InitialScore = 0;
 
-    UPROPERTY(EditAnywhere, Category = "CurrentScore")
+    UPROPERTY(EditAnywhere, Category = "Score")
     int CurrentScore = 0;
+
+    UPROPERTY(EditAnywhere, Category = "Score")
+    int DucklingsDead = 0;
+
+    UPROPERTY(EditAnywhere, Category = "Score")
+    int DucklingsGrown = 0;
 
 public:
     /** Returns CameraBoom subobject **/

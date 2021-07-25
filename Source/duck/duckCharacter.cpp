@@ -152,3 +152,28 @@ void ADuckCharacter::UpdateScore(int score)
 {
 	CurrentScore += score;
 }
+
+int ADuckCharacter::GetDucklingsDead()
+{
+    return DucklingsDead;
+}
+
+int ADuckCharacter::GetDucklingsGrown()
+{
+    return DucklingsGrown;
+}
+
+bool ADuckCharacter::IsGameOver()
+{
+    return DucklingsDead + DucklingsGrown == 8;
+}
+
+void ADuckCharacter::SetDucklingDied()
+{
+    DucklingsDead++;
+}
+
+void ADuckCharacter::SetDucklingGrown()
+{
+    DucklingsGrown++;
+}
