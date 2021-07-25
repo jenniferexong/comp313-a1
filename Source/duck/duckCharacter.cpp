@@ -177,3 +177,9 @@ void ADuckCharacter::SetDucklingGrown()
 {
     DucklingsGrown++;
 }
+
+void ADuckCharacter::SetFullyGrownDied()
+{
+    DucklingsGrown--;
+    DucklingsDead++;
+}

@@ -49,6 +49,12 @@ public:
     void SetDucklingDied();
 
     /** 
+     * Increases death counts and decreases grown count
+     */
+    UFUNCTION(BlueprintCallable, Category = "Score")
+    void SetFullyGrownDied();
+
+    /** 
      * Increments number of ducklings that have grown up 
      */
     UFUNCTION(BlueprintCallable, Category = "Score")
